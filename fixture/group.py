@@ -14,6 +14,7 @@ from System.Windows.Automation import *
 class GroupHelper:
     def __init__(self, app):
         self.app = app
+        self.modal = None
 
     def add_new_group(self, name):
         self.modal.Get(SearchCriteria.ByAutomationId("uxNewAddressButton")).Click()
@@ -22,8 +23,8 @@ class GroupHelper:
 
 
     def close_group_window(self):
-        if self.modal is not None:
-            self.modal.Get(SearchCriteria.ByAutomationId("uxCloseAddressButton")).Click()
+        self.modal.Get(SearchCriteria.ByAutomationId("uxCloseAddressButton")).Click()
+        self.modal = None
 
 
     def open_group_window(self):

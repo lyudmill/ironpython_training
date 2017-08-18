@@ -1,4 +1,6 @@
 {
-  "application": {"name":"AddressBook.exe",
-                "path":"C:\\Devel\\Tools\\FreeAddressBook\\"}
+  "application": {
+      "name":"AddressBook.exe",
+      "path":"C:\\Devel\\Tools\\FreeAddressBook"
+  }
 }

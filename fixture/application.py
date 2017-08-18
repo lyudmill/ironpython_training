@@ -22,7 +22,7 @@ class WinApplication:
     def __init__(self, app_path):
         print("WinApp init")
         self.path = app_path
-        self.app = Application.Launch("app_path")
+        self.app = Application.Launch(app_path)
         self.main_window = self.app.GetWindow("Free Address Book")
         self.group = GroupHelper(self)
 
