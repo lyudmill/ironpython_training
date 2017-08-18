@@ -21,11 +21,9 @@ class GroupHelper:
         self.modal.Get(SearchCriteria.ByControlType(ControlType.Edit)).Enter(name)
         Keyboard.Instance.PressSpecialKey(KeyboardInput.SpecialKeys.RETURN)
 
-
     def close_group_window(self):
         self.modal.Get(SearchCriteria.ByAutomationId("uxCloseAddressButton")).Click()
         self.modal = None
-
 
     def open_group_window(self):
         if self.modal is None:

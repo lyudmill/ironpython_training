@@ -10,10 +10,9 @@ target = None
 @pytest.fixture()
 def app(request):
     global fixture
-#    config = load_config(request.config.getoption("--target"))
+    config = load_config(request.config.getoption("--target"))
     if fixture is None:
-#        fixture = WinApplication(app_path=os.path.join(config['application']["path"],config['application']["name"]))
-        fixture = WinApplication("C:\\Devel\\Tools\\FreeAddressBook\\AddressBook.exe")
+        fixture = WinApplication(app_path=os.path.join(config['application']["path"],config['application']["name"]))
     return fixture
 
 
